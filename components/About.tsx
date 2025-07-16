@@ -5,6 +5,7 @@ import { Users, Award, Clock, Target } from 'lucide-react'
 
 const About = () => {
   const stats = [
+    
     { icon: <Users className="w-8 h-8" />, number: '50+', label: 'Projects Completed' },
     { icon: <Award className="w-8 h-8" />, number: '30+', label: 'Happy Clients' },
     { icon: <Clock className="w-8 h-8" />, number: '5+', label: 'Years Experience' },
