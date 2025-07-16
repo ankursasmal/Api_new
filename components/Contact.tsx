@@ -52,20 +52,20 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      info: '+91 98765 43210',
-      link: 'tel:+919876543210'
+      info: '+91 9097429446',
+      link: 'tel:+919097429446'
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      info: 'hello@techsolutions.com',
-      link: 'mailto:hello@techsolutions.com'
+      info: 'contact@nxeqube.com',
+      link: 'mailto:contact@nxeqube.com'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Address',
-      info: 'New Town, Kolkata, 700091',
-      link: 'https://maps.google.com/?q=New+Town,+Kolkata,+700091'
+      info: 'Arena Housing Society, Street Number 110, BA Block(Newtown), Action Area I, Newtown, New Town, West Bengal 700156',
+      link: 'https://maps.google.com/?q=Arena+Housing+Society,+Street+Number+110,+BA+Block+Newtown,+Action+Area+I,+Newtown,+New+Town,+West+Bengal+700156'
     }
   ]
 
@@ -136,7 +136,7 @@ const Contact = () => {
               </h4>
               <div className="w-full h-64 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58959.95171453!2d88.4324!3d22.5868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275b020000001%3A0x1234567890abcdef!2sNew%20Town%2C%20Kolkata%2C%20West%20Bengal%20700091!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58959.95171453!2d88.4324!3d22.5868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275b020000001%3A0x1234567890abcdef!2sArena%20Housing%20Society%2C%20Street%20Number%20110%2C%20BA%20Block%2C%20Action%20Area%20I%2C%20Newtown%2C%20West%20Bengal%20700156!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

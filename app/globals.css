@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
 /* Custom styles */
 .gradient-text {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -12,10 +17,40 @@
   @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300;
 }
 
+.btn-secondary {
+  @apply bg-white/10 dark:bg-black/20 text-gray-900 dark:text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 dark:hover:bg-black/30 border border-gray-300 dark:border-gray-700 transition-all duration-300;
+}
+
 .glass-effect {
-  @apply bg-white/10 backdrop-blur-md border border-white/20;
+  @apply bg-white/20 dark:bg-black/20 backdrop-blur-md border border-gray-200/30 dark:border-gray-700/30;
 }
 
 .glass-card {
-  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-xl;
+  @apply bg-white/80 dark:bg-black/80 backdrop-blur-md border border-gray-200/20 dark:border-gray-700/20 rounded-xl shadow-lg dark:shadow-2xl transition-all duration-500;
+}
+
+/* Ensure smooth transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* Theme-specific backgrounds */
+html:not(.dark) {
+  background-color: #ffffff !important;
+}
+
+html:not(.dark) body {
+  background-color: #ffffff !important;
+}
+
+html.dark {
+  background-color: #000000 !important;
+}
+
+html.dark body {
+  background-color: #000000 !important;
 }

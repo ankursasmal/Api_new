@@ -59,15 +59,50 @@ const Portfolio = () => {
       category: 'Web Development',
       liveUrl: '#',
       githubUrl: '#'
+    },
+    {
+      title: 'Blockchain Wallet',
+      description: 'Secure cryptocurrency wallet with multi-chain support and DeFi integration.',
+      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&h=400&fit=crop',
+      technologies: ['Solidity', 'Web3.js', 'React', 'MetaMask'],
+      category: 'Blockchain',
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      title: 'IoT Dashboard',
+      description: 'Real-time monitoring dashboard for IoT devices with data visualization.',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop',
+      technologies: ['React', 'MQTT', 'InfluxDB', 'Grafana'],
+      category: 'IoT',
+      liveUrl: '#',
+      githubUrl: '#'
+    },
+    {
+      title: 'AR Shopping App',
+      description: 'Augmented reality shopping experience with virtual try-on features.',
+      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop',
+      technologies: ['Unity', 'ARCore', 'C#', 'Firebase'],
+      category: 'AR/VR',
+      liveUrl: '#',
+      githubUrl: '#'
     }
   ]
 
-  const categories = ['All', 'Web Development', 'Mobile Development', 'AI Integration']
+  const categories = ['All', 'Web Development', 'Mobile Development', 'AI Integration','Api Integration']
   const [activeCategory, setActiveCategory] = useState('All')
+  const [showAllProjects, setShowAllProjects] = useState(false)
 
   const filteredProjects = activeCategory === 'All' 
-    ? projects 
+    ? projects.filter(project => !['Blockchain', 'IoT', 'AR/VR'].includes(project.category))
     : projects.filter(project => project.category === activeCategory)
+
+  const displayedProjects = showAllProjects ? filteredProjects : filteredProjects.slice(0, 6)
+
+  const handleViewAllProjects = () => {
+    setShowAllProjects(true)
+    setActiveCategory('All')
+  }
 
   return (
     <section id="portfolio" className="py-20 relative">
@@ -185,6 +220,7 @@ const Portfolio = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="btn-primary"
+            onClick={handleViewAllProjects}
           >
             View All Projects
           </motion.button>

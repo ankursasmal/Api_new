@@ -5,19 +5,31 @@ export async function POST(request: NextRequest) {
   try {
     const { name, email, message } = await request.json()
 
+    // Validate required fields
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { error: 'All fields are required' },
+        { status: 400 }
+      )
+    }
+console.log(email
+)
     // Create transporter
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // or your email service
+      service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER,
+        user: email,
         pass: process.env.EMAIL_PASS,
       },
     })
 
+    // Verify transporter configuration
+    await transporter.verify()
+
     // Email options
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.CONTACT_EMAIL || 'hello@techsolutions.com',
+      from: email,
+      to: process.env.CONTACT_EMAIL ,
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

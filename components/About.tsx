@@ -49,7 +49,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="gradient-text">TechSolutions</span>
+            About <span className="gradient-text">NXEQUBE</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a passionate team of developers, designers, and innovators dedicated to creating 
@@ -87,7 +87,7 @@ const About = () => {
           >
             <h3 className="text-3xl font-bold mb-6">Our Story</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Founded in 2019, TechSolutions began as a small team of passionate developers 
+              Founded in 2019, NXEQUBE began as a small team of passionate developers 
               who believed in the power of technology to transform businesses. Today, we've 
               grown into a full-service digital agency that helps companies of all sizes 
               achieve their digital goals.

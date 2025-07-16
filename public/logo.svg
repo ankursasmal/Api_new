@@ -1,0 +1,15 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- NXEQUBE cube logo -->
+  <defs>
+    <linearGradient id="cubeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0080ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Cube shape -->
+  <path d="M20 30 L50 15 L80 30 L80 70 L50 85 L20 70 Z" fill="url(#cubeGradient)" opacity="0.9"/>
+  
+  <!-- X shape inside -->
+  <path d="M35 40 L65 60 M65 40 L35 60" stroke="#00ffff" stroke-width="4" stroke-linecap="round"/>
+</svg>
