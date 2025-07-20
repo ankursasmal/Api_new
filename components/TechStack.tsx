@@ -15,7 +15,7 @@ const TechStack = () => {
       glowColor: 'shadow-blue-500/20',
       technologies: [
         { name: 'React', level: 95, icon: '⚛️' },
-        { name: 'Next.js', level: 90, icon: '🔺' },
+        { name: 'Next.js', level: 97, icon: '🔺' },
         { name: 'TypeScript', level: 88, icon: '📘' },
         { name: 'Tailwind CSS', level: 92, icon: '🎨' },
         { name: 'Vue.js', level: 85, icon: '💚' }
@@ -28,9 +28,9 @@ const TechStack = () => {
       borderColor: 'border-purple-500/30',
       glowColor: 'shadow-purple-500/20',
       technologies: [
-        { name: 'Flutter', level: 90, icon: '🦋' },
-        { name: 'React Native', level: 85, icon: '📱' },
-        { name: 'Dart', level: 88, icon: '🎯' },
+        { name: 'Flutter', level: 99, icon: '🦋' },
+        { name: 'React Native', level: 93, icon: '📱' },
+        { name: 'Dart', level: 94, icon: '🎯' },
         { name: 'Swift', level: 75, icon: '🍎' },
         { name: 'Kotlin', level: 80, icon: '🤖' }
       ]
@@ -42,11 +42,11 @@ const TechStack = () => {
       borderColor: 'border-green-500/30',
       glowColor: 'shadow-green-500/20',
       technologies: [
-        { name: 'Node.js', level: 92, icon: '🟢' },
-        { name: 'Python', level: 88, icon: '🐍' },
-        { name: 'Django', level: 85, icon: '🎸' },
-        { name: 'Express.js', level: 90, icon: '🚀' },
-        { name: 'FastAPI', level: 82, icon: '⚡' }
+        { name: 'Node.js', level: 98, icon: '🟢' },
+        { name: 'Python', level: 94, icon: '🐍' },
+        { name: 'Django', level: 95, icon: '🎸' },
+        { name: 'Express.js', level: 98, icon: '🚀' },
+        { name: 'FastAPI', level: 85, icon: '⚡' }
       ]
     },
     {
@@ -56,11 +56,11 @@ const TechStack = () => {
       borderColor: 'border-orange-500/30',
       glowColor: 'shadow-orange-500/20',
       technologies: [
-        { name: 'MongoDB', level: 90, icon: '🍃' },
-        { name: 'PostgreSQL', level: 85, icon: '🐘' },
+        { name: 'MongoDB', level: 98, icon: '🍃' },
+        { name: 'PostgreSQL', level: 93, icon: '🐘' },
         { name: 'Redis', level: 80, icon: '🔴' },
-        { name: 'Firebase', level: 88, icon: '🔥' },
-        { name: 'MySQL', level: 82, icon: '🐬' }
+        { name: 'Firebase', level: 92, icon: '🔥' },
+        { name: 'MySQL', level: 95, icon: '🐬' }
       ]
     },
     {
@@ -250,7 +250,7 @@ const TechStack = () => {
                       </div>
 
                       {/* Progress bar */}
-                      <div className="relative">
+                      {/* <div className="relative">
                         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
                           <motion.div
                             initial={{ width: 0, x: -100 }}
@@ -265,15 +265,10 @@ const TechStack = () => {
                               boxShadow: `0 0 20px rgba(59, 130, 246, 0.5)`,
                               transition: { duration: 0.3 }
                             }}
-                            className={`h-3 rounded-full relative overflow-hidden ${
-                              tech.level >= 90 ? 'bg-gradient-to-r from-green-400 to-green-600' :
-                              tech.level >= 80 ? 'bg-gradient-to-r from-blue-400 to-blue-600' :
-                              tech.level >= 70 ? 'bg-gradient-to-r from-yellow-400 to-yellow-600' :
-                              'bg-gradient-to-r from-red-400 to-red-600'
-                            }`}
-                          >
+                            className={`h-0 rounded-full relative overflow-hidden bg-gradient-to-r ${category.color}`}
+                          > */}
                             {/* Shimmer effect */}
-                            <motion.div
+                            {/* <motion.div
                               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
                               animate={hoveredCategory === index ? { x: [-100, 200] } : {}}
                               transition={{ 
@@ -281,17 +276,17 @@ const TechStack = () => {
                                 repeat: Infinity,
                                 delay: idx * 0.2
                               }}
-                            />
+                            /> */}
                             
                             {/* Percentage text inside progress bar */}
-                            <div className="absolute inset-0 flex items-center justify-center">
+                            {/* <div className="absolute inset-0 flex items-center justify-center">
                               <span className="text-xs font-bold text-white drop-shadow-sm">
                                 {tech.level}%
                               </span>
                             </div>
                           </motion.div>
                         </div>
-                      </div>
+                      </div> */}
                     </motion.div>
                   ))}
                 </div>

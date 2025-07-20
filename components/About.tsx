@@ -6,9 +6,9 @@ import { Users, Award, Clock, Target } from 'lucide-react'
 const About = () => {
   const stats = [
     
-    { icon: <Users className="w-8 h-8" />, number: '50+', label: 'Projects Completed' },
-    { icon: <Award className="w-8 h-8" />, number: '30+', label: 'Happy Clients' },
-    { icon: <Clock className="w-8 h-8" />, number: '5+', label: 'Years Experience' },
+    { icon: <Users className="w-8 h-8" />, number: '30+', label: 'Projects Completed' },
+    { icon: <Award className="w-8 h-8" />, number: '20+', label: 'Happy Clients' },
+    { icon: <Clock className="w-8 h-8" />, number: '3+', label: 'Years Experience' },
     { icon: <Target className="w-8 h-8" />, number: '99%', label: 'Success Rate' }
   ]
 
@@ -142,7 +142,7 @@ const About = () => {
         </div>
 
         {/* Team Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -188,7 +188,7 @@ const About = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   )
